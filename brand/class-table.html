@@ -25,9 +25,9 @@
 
 <body>
   <div id="skip">
-    <a href="nav#gnb">주메뉴 바로가기 &#8595; </a>
+    <a href="#gnb">주메뉴 바로가기 &#8595; </a>
     <a href="#topQuick">상단 퀵메뉴 바로가기 &#8595; </a>
-    <a href="section#cont1">본문 바로가기 &#8595; </a>
+    <a href="#cont1">본문 바로가기 &#8595; </a>
   </div>
   <div id="wrap">
     <div id="header-wrap" class="shadow">
@@ -40,16 +40,16 @@
           </h1>
           <div id="util_wrap">
             <div id="lang">
-              <button type="button">
-                <div class="lang" title="다국어지원"></div>
-                <ul>
-                  <li><a href="../ko/main/index.do?lang=ko">KOR</a></li>
-                  <li><a href="../en/main/index.do?lang=en">ENG</a></li>
-                  <li><a href="../jp/main/index.do?lang=jp">JPN</a></li>
-                  <li><a href="../ch/main/index.do?lang=ch">CHN</a></li>
-                  <!-- seoul-sky참고 : js의 영역인듯..  -->
-                </ul>
-              </button><!-- main과 sub가 디자인이 다름 -->
+              <button type="button" class="current">
+                <span class="blind">언어선택 KOR 선택됨</span>
+              </button>
+              <ul>
+                <li><a href="../ko/main/index.do?lang=ko">KOR</a></li>
+                <li><a href="../en/main/index.do?lang=en">ENG</a></li>
+                <li><a href="../jp/main/index.do?lang=jp">JPN</a></li>
+                <li><a href="../ch/main/index.do?lang=ch">CHN</a></li>
+                <!-- seoul-sky참고 : js의 영역인듯..  -->
+              </ul>
             </div>
             <div id="util">
               <a href="../util/cart.html"><img src="../assets/imgs/common/header/cart.svg" alt="장바구니">
@@ -110,7 +110,7 @@
         </nav>
       </header>
     </div>
-    <section id="dbody" class="brand story section_wrap">
+    <section id="dbody" class="brand">
       <h2 class="page-title"><span>BRAND</span></h2>
       <!-- location-wrap -->
       <div class="location-wrap">
@@ -167,23 +167,23 @@
       </div>
       <!-- //location-wrap -->
       <!-- article-wrap -->
-      <div class="article-wrap">
+      <div id="section_wrap">
         <div class="inner">
-          <div id="cont1">
+          <section id="cont1">
+            <h3 aria-hidden="true">KIMCHI ACADEMY</h3>
+            <div>OMG 김치 아카데미와 함께라면, 이제 당신도 김치 마스터!!</div>
+          </section>
+          <section id="cont2">
+            <h3>5월 시간표</h3>
+            <div></div>
+          </section>
+          <section id="cont3">
             <h3></h3>
             <div></div>
-          </div>
-          <div id="cont2">
+          </section>
+          <section id="cont4">
             <h3></h3>
-            <div></div>
-          </div>
-          <div id="cont3">
-            <h3></h3>
-            <div></div>
-          </div>
-          <div id="cont">
-            <h3></h3>
-          </div>
+          </section>
         </div>
       </div>
       <!-- //article-wrap -->

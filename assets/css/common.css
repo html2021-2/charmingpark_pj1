@@ -1,20 +1,22 @@
 @charset "utf-8";@import url(font.css);/* reset */
-body, h1, h2, h3,/* */ button, ul { margin: 0; padding: 0; } 
+body, h1, h2, h3,/* */ button, ul, p { margin: 0; padding: 0; } 
 ul, li { list-style: none; } 
+em {font-style: normal;}
 a:link, a:visited, a:hover, a:active { text-decoration: none; color: inherit; } 
 h1, h2, h3/* */ { font-size: inherit/* */; font-weight: normal; } 
 img { border: 0; vertical-align: bottom; } 
-button { border: 0; background: none; font-size: inherit; font-weight: inherit; font-family: inherit; cursor: pointer; } 
-header, nav,section, footer/* */ { display: block; } 
+button { border: 0; background: none; font-size: inherit; cursor: pointer; font-weight: inherit; font-family: inherit; } 
+header, nav, section, article, footer { display: block; } 
 
 /* font */
-body { font-size: 16px; font-family: Noto Sans KR; color: #333; } 
+body{ font-size: 16px; font-family: Noto Sans KR; color: #333; } 
 .Tmon { font-family: Tmon; } 
 
 /* common */
 #skip a { position: absolute; top: 0; left: -9999px; z-index: 10000; } 
-#skip a:focus { width: 100%; height: 50px; line-height: 50px; left: 0; outline: 2px solid #ff1900; text-align: center; color: #fff; background: #000; font-weight: 500;} 
-.blind { width: 1px; height: 1px; border: 0; overflow: hidden; position: absolute; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%) } 
+#skip a:focus { left: 0; width: 100%; height: 50px; line-height: 50px; outline: 2px solid #ff1900; text-align: center; color: #fff; background: #000; font-weight: 500;} 
+
+.blind { width: 1px; height: 1px; border: 0; overflow: hidden; position: absolute; clip: rect(1px 1px 1px 1px); clip-path: inset(50%) } 
 .clearfix::after { content: ''; display: block; clear: both; } 
 .bdshape { border-radius: 0% 0% 30px 0%; } 
 .shadow { box-shadow:0 2px 20px rgba(0, 0, 0, 0.15); } 
@@ -23,12 +25,14 @@ body { font-size: 16px; font-family: Noto Sans KR; color: #333; }
 .txt-nxt::after { content: ''; position: absolute; top: calc(50% + 2px); right: -10px; display: block; width: 1px; height: 12px; margin-top: -6px; background-color: rgb(0, 0, 0); opacity: 0.2; } 
 
 /*** header ***/
-#header-wrap { position: relative; width: 100%; position: fixed; background: #fff; z-index: 9000; /* z-index: 10000; 이라고 하면 #skip a와 같아서 헤더가 더 위에 올라가죠... 맘에 안들면 고정으로 바꾸기 */ } 
+#header-wrap { position: relative; width: 100%; position: absolute; background: #fff; z-index: 9000; /* main.html에서는 스크롤이 슬라이더를 지나면 sub형식의 header가 되도록. */ } 
 /* lang */
 #header .inner { position: relative; padding-top: 20px; } 
-#header .inner .logo { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 220px; } 
-#header .inner h1.logo a img { width: 100%; } 
-#lang .lang:hover ,#lang button:focus .lang { opacity: 0.5; } 
+#header .inner .logo{ position: absolute; top: 20px;left: 566px; } 
+#header .inner h1.logo a img { width: 220px; } 
+
+#lang button:hover ,#lang button:focus { opacity: 0.5; } 
+#lang ul{display: none;}
 #lang ul li:hover a, #lang ul li a:focus { font-weight: 600; } 
 #util a:hover img, #util a:focus img { opacity: 0.5; } 
 #gnb { position: absolute; } 
@@ -38,21 +42,30 @@ body { font-size: 16px; font-family: Noto Sans KR; color: #333; }
 #gnb>ul { display: flex; justify-content: space-between; } 
 #gnb>ul>li { position: relative; color: #343434; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; margin: 0 28px; } 
 #gnb>ul>li>a { display: block; padding: 18px 0; font-family: Tmon; font-size: 18px; } 
+#gnb>ul>li>a:focus{position: relative;z-index: 1;} /* 하단에 잘리는 아웃라인 제어 */
 #gnb ul li ul { position: absolute; left: -22px; padding: 20px 0 20px 26px; background: rgba(255, 255, 255, 0.95); font-size: 16px; border-radius: 0 0 15px 15px; } 
 #gnb ul li ul li { text-align: left; font-family: "Noto Sans KR"; width: auto; width: 150px; height: 42px; line-height: 42px; color: #444444; } 
 #gnb ul li ul li a { height: 100%; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; } 
 #gnb ul li ul li:hover a, #gnb ul li ul li a:focus { font-weight: 600; letter-spacing: 0.4px; } 
-#gnb> ul> li:hover, #gnb> ul> li> a:focus { color: #ff1900; position: relative; } 
+#gnb> ul> li:hover, #gnb> ul> li> a:focus { color: #f02900; position: relative; } 
 #gnb> ul> li> a::after { background: transparent; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; } 
-#gnb> ul> li:hover> a::after, #gnb> ul> li> a:focus::after { content: ""; position: absolute; box-sizing: border-box; width: 100%; height: 3px; background: #ff1900; left: 0; right: 0; margin: 20px auto; } 
+#gnb> ul> li:hover> a::after, #gnb> ul> li> a:focus::after { content: ""; position: absolute; box-sizing: border-box; width: 100%; height: 3px; background: #f02900; left: 0; right: 0; margin: 20px auto; } 
 
+/* section */
+#section_wrap >.inner{background: #0ce26c2d;}
 
-
-
-
+/* tab - bestFour */
+.tab-box > ul{position: absolute; height: 70px; margin-bottom: 55px; right: 0; top: 2px;}
+/* cont$가 por */
+.tab-box li.tab{float: left; height: 21px; margin: 10px; text-align: center; cursor: pointer; color: #ccc; position: relative; }
+.tab-box .tab:hover, .tab-box .tab:focus, .tab-box .tab.active{color: #ef2800;}
+.tab-box .tab:hover::after, .tab-box .tab:focus::after, .tab-box .tab.active::after{content: ''; position: absolute; left: 0; bottom: -10px; width: 100%; height: 2px; background-color: #ef2800;}
+.tab-box li.tab span{font-size: 21px; line-height: 21px; }
+.tab-box .tabpanel{display: none;}
+.tab-box .tabpanel.active{display: block;}
 
 /* footer */
-#footer { position: relative; width: 100%; height: 433px; background: url(../imgs/common/footer/footer_bg-80.jpg)no-repeat 100% / cover; padding-top: 160px; box-sizing: border-box; } 
+#footer { position: relative; width: 100%; height: 433px; background: url(../imgs/common/footer/footer_bg-80.jpg) no-repeat 100% / cover; padding-top: 160px; box-sizing: border-box; } 
 #footer #top { position: absolute; right: -110px; top: calc(50% - 45px); width: 80px; height: 80px; background: #000; color: #fff; font-weight: 600; text-align: center; line-height: 100px; letter-spacing: 1px; } 
 #footer #top::after { content: ""; position: absolute; top: 25px; left: 0; right: 0; margin: 0 auto; display: block;width: 0; height: 0;border-bottom: 10px solid #fff; border-right: 12px solid transparent;border-left: 12px solid transparent; border-top: 0px solid 
 none; transition: top 0.5s; } 
@@ -94,16 +107,16 @@ none; transition: top 0.5s; }
 
 
 /* footer-wrap */
-.footer-wrap { position: relative; font-size: 13px; line-height: 1; font-weight: 600; color: #727272; } 
+.footer-wrap { position: relative; font-size: 13px; line-height: 2; font-weight: 600; color: #727272; } 
 .footer-wrap h2 { height: 250px; float: left; margin-right: 50px; } 
 .footer-wrap h2 img { width: 120px; height: 44px; } 
 .footer-wrap ul.footer-menu { position: absolute; right: 0; } 
 .footer-menu li { float: left; } 
 .footer-menu li a:hover, .footer-menu li a:focus { opacity: 0.7; } 
 .btns a, .text-box a { display: inline-block; width: 88px;height: 28px; line-height: 26px; border: 1px solid #b1ada6;text-align: center; } 
-.text-box a { position: absolute; width: 120px; top: -7px; } 
+.text-box a { position: absolute; width: 120px; top: -1px; } 
 
-.text-box em { font-weight: 700; font-size: 15px; font-style: normal; } 
+.text-box em { font-weight: 700; font-size: 15px; } 
 .btns a:hover, .text-box a:hover, .btns a:focus, .text-box a:focus { text-decoration: underline; opacity: 0.7; } 
 .btns a+a, .text-box a { margin-left: 10px; } 
 .footer-wrap .sns-menu { position: absolute; right: 0; top: 50px; } 

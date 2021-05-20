@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>메인 | OMG김치</title>
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- script -->
+  <script src="assets/js/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/tab.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#slick_slider .slick_inner').slick({
+        slide: 'div', //슬라이드 되어야 할 태그 ex) div, li 
+        infinite: true, //무한 반복 옵션	 
+        slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+        speed: 100, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+        arrows: true, // 옆으로 이동하는 화살표 표시 여부
+        dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
+        // autoplay: true, // 자동 스크롤 사용 여부
+        speed: 2000,
+        autoplaySpeed: 4000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        pauseOnHover: true, // 슬라이드 이동	시 마우스 오버하면 슬라이더 멈추게 설정
+        prevArrow: $('#slick_slider .slick-prev'), // 이전 화살표 모양 설정
+        nextArrow: $('#slick_slider .slick-next'), // 다음 화살표 모양 설정
+        dotsClass: "slick-dots", //아래 나오는 페이지네이션(점) css class 지정
+        appendDots: $("#slick_slider .slick-pagination"), //dots이 연결된 위치 변경
+      });
+    });
+  </script>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="icon" href="assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon-96x96.png" sizes="96x96">
+
+</head>
+
+<body>
+  <!-- header#header>(h1>a)+(div#util>a*3)+(div#lang>button+(ul>li*4>a))+(nav#gnb>h2+ul>li*5>a+(ul>li>a)) -->
+
+  <div id="skip">
+    <a href="#gnb">주메뉴 바로가기 &#8595; </a>
+    <a href="#topQuick">상단 퀵메뉴 바로가기 &#8595; </a>
+    <a href="#cont1">본문 바로가기 &#8595; </a>
+  </div>
+  <div id="wrap">
+    <div id="header-wrap" class="shadow">
+      <header id="header">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="main.html">
+              <img src="assets/imgs/common/header/main_header_logo.svg" alt="OMG김치">
+            </a>
+          </h1>
+          <div id="lang">
+            <button type="button" class="current">
+              <span class="blind">언어선택 KOR 선택됨</span>
+            </button>
+            <ul>
+              <li><a href="/ko/main/index.do?lang=ko">KOR</a></li>
+              <li><a href="/en/main/index.do?lang=en">ENG</a></li>
+              <li><a href="/jp/main/index.do?lang=jp">JPN</a></li>
+              <li><a href="/ch/main/index.do?lang=ch">CHN</a></li>
+              <!-- seoul-sky참고 -->
+            </ul>
+          </div>
+          <div id="util">
+            <a href="util/cart.html"><img src="assets/imgs/common/header/cart.svg" alt="" title="장바구니">
+              <span>0</span>
+            </a>
+            <a href="util/sign-in.html"><img src="assets/imgs/common/header/sign_in.svg" alt="" title="회원가입"></a>
+            <a href="util/login.html"><img src="assets/imgs/common/header/login.svg" alt="" title="로그인"></a>
+          </div>
+        </div>
+        <nav id="gnb">
+          <h2 class="blind">메인 메뉴</h2>
+          <ul>
+            <li>
+              <a href="brand/brand.html">BRAND</a>
+              <ul>
+                <li><a href="brand/brand.html">OMG김치 이야기</a></li>
+                <li><a href="brand/history.html">김치 이야기</a></li>
+                <li><a href="brand/class-table.html">김치 아카데미</a></li>
+                <li><a href="brand/csr.html">OMG김치 CSR</a></li>
+                <li><a href="brand/press-list.html">PRESS CENTER</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="menu/kimchi-best.html">MENU</a>
+              <ul>
+                <li><a href="menu/kimchi-best.html">BEST 김치</a></li>
+                <li><a href="menu/kimchi-list.html">김장 김치</a></li>
+                <li><a href="menu/kimchi-sauce.html">김치 양념</a></li>
+                <li><a href="menu/kimchi-diy.html">김치요리 DIY 팩</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="mbr/bnft.html">MEMBERSHIP</a>
+              <ul>
+                <li><a href="mbr/bnft.html">멤버십 혜택</a></li>
+                <li><a href="mbr/vip.html">한민족 VIP</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="bnfit/gcard.html">BENEFIT</a>
+              <ul>
+                <li><a href="bnfit/gcard.html">GIFT CARD</a></li>
+                <li><a href="bnfit/baemin.html">배달의 민족</a></li>
+                <li><a href="bnfit/point.html">포인트 결제</a></li>
+                <li><a href="bnfit/voucher.html">상품권</a></li>
+                <li><a href="bnfit/event.html">이벤트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="store/domestic.html">STORE</a>
+              <ul>
+                <li><a href="store/domestic.html">국내</a></li>
+                <li><a href="store/oversea.html">해외개인결제</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div id="section_wrap">
+      <section id="slick_slider" class="cont1">
+        <div class="slick_inner">
+          <div class="slideer1">
+            <div class="slider_text">
+              <strong>New Event</strong>
+              <p>1인 밥상 위에 매일 다른 이색김치 실화?!</p>
+              <h2>매일 매일<br>
+                김치 구독</h2>
+              <h3>김치를 SNS처럼<br>
+                신선한 실시간 입맛에 감동을 주다</h3>
+            </div>
+          </div>
+          <div class="slideer2">
+            <div class="slider_text">
+              <strong>New Event</strong>
+              <p>1인 밥상 위에 매일 다른 이색김치 실화?!</p>
+              <h2>매일 매일<br>
+                김치 구독</h2>
+              <h3>김치를 SNS처럼<br>
+                신선한 실시간 입맛에 감동을 주다</h3>
+            </div>
+          </div>
+          <div class="slideer3">
+            <div class="slider_text">
+              <strong>New Event</strong>
+              <h3>1인 밥상 위에 매일 다른 이색김치 실화?!</h3>
+              <h2>매일 매일<br>
+                김치 구독</h2>
+              <p>김치를 SNS처럼<br>
+                신선한 실시간 입맛에 감동을 주다</p>
+            </div>
+          </div>
+        </div>
+        <div class="controller">
+          <div class="slick-pagination"></div><!-- ul 태그 동적 생성 -->
+
+          <div class="slick-button-wrap">
+            <div class="slick-prev">
+              <span class="blind">이전 슬라이더 보기</span>
+            </div>
+            <div class="slick-next">
+              <span class="blind">다음 슬라이더 보기</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="inner">
+        <section id="cont2">
+          <h2>BEST 상품</h2>
+          <!-- 
+              (ul[id="tabList" role="tablist" aria-label="BEST 상품 리스트"]>(li*5[id="tab$" role="tab" aria-controls="tabpanel$"]))+(div*5[id="tabpanel$" class="best-four" role="tabpanel" aria-labelledby="tab$"]>(ul>li*4>a>(img[alt="상품$"]+h3+p+(p>(span>em)*3))))
+            -->
+          <div id="bestFour" class="tab-box">
+            <ul id="tablist" class="tablist" role="tablist" aria-label="BEST 상품 리스트">
+              <li id="tab1" class="tab" role="tab" aria-controls="tabpanel1"><span>전체</span></li>
+              <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2"><span>배추</span></li>
+              <li id="tab3" class="tab" role="tab" aria-controls="tabpanel3"><span>무</span></li>
+              <li id="tab4" class="tab" role="tab" aria-controls="tabpanel4"><span>파</span></li>
+              <li id="tab5" class="tab" role="tab" aria-controls="tabpanel5"><span>갓</span></li>
+              <li id="tab5" class="tab" role="tab" aria-controls="tabpanel6"><span>기타</span></li>
+            </ul>
+            <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tabpanel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tabpanel5" class="tabpanel" role="tabpanel" aria-labelledby="tab5">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tabpanel6" class="tabpanel" role="tabpanel" aria-labelledby="tab6">
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="" alt="">
+                    <h3>알싸한맛 일품 파김치3kg</h3>
+                    <p>#무료배송#국내산100%</p>
+                    <p><span>27,300<em> 원</em></span><del>36,500<em> 원</em></del><span>15<em> &#37;</em></span></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="cont3">
+
+          <table id="time_table">
+            <caption>KIMCHI ACADEMY &#183; 쿠킹클래스</caption>
+            <colgroup>
+              <col class="wid20p">
+              <col class="wid20p">
+              <col class="wid20p">
+            </colgroup>
+
+            <!-- 3) 테이블의 가로행 구조 : thead, tbody, tfoot(없는 경우 많음) -->
+            <thead>
+              <tr>
+                <!-- 테이블의 한줄 -->
+                <th rowspan="2">교실</th> <!-- 제목셀 -->
+                <th colspan="2">수강생</th>
+                <!-- 혼자 한칸을 차지 하지 않고 셀이 합쳐진 경우 
+                    1) 가로 행이 합쳐진 경우 rowspan="합쳐진 셀 개수"
+                    2) 세로 열이 합쳐진 경우 colspan="합쳐진 셀 개수" -->
+              </tr>
+              <tr>
+                <th scope="col" id="m">남</th>
+                <th scope="col" id="w">여</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row" id="c1">1반</th>
+                <td headers="c1 m">10</td> <!-- 1반 남 10-->
+                <td headers="c1 w">5</td> <!-- 1반 여 5-->
+              </tr>
+              <tr>
+                <th scope="row" id="c2">2반</th>
+                <td headers="c2 m">5</td> <!-- 2반 남 5-->
+                <td headers="c2 w">5</td> <!-- 2반 여 5-->
+              </tr>
+              <tr>
+                <th scope="row" id="c3">3반</th>
+                <td headers="c3 m">10</td> <!-- 3반 남 10-->
+                <td headers="c3 w">5</td> <!-- 3반 여 5-->
+              </tr>
+            </tbody>
+
+          </table>
+        </section>
+        <section id="cont4">
+          <h2>CSR &#183; 사회공헌</h2>
+          <div class="gallery"></div>
+        </section>
+        <section id="cont5">
+          <h2>OMG KIMCHI BENEFIT</h2>
+          <div class="three_cards"></div>
+        </section>
+        <section id="cont6">
+          <h2>&#38867; 민족 REWARD</h2>
+          <div class="six_lists"></div>
+        </section>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="speed-big-menu inner">
+        <h2 class="blind">하단 퀵메뉴</h2>
+        <ul>
+          <li class="menu-01">
+            <a href="" target="_blank">
+              <!-- display:block, bg -->
+              <span class="txt">예약하기</span>
+              <span class="arrow"></span>
+            </a>
+          </li>
+          <li class="menu-02">
+            <a href="" target="_blank">
+              <!-- display:block, bg -->
+              <span class="txt">사후 적립</span>
+              <span class="arrow"></span>
+            </a>
+          </li>
+          <li class="menu-03 bdshape">
+            <a href="" target="_blank">
+              <!-- display:block, bg -->
+              <span class="txt">주문배달<br>1234-5678</span>
+              <span class="arrow"></span>
+            </a>
+          </li>
+        </ul>
+        <div id="top">
+          <a href="" class="btn-top">TOP</a>
+        </div>
+      </div>
+      <section class="footer-wrap inner">
+        <h2>
+          <img src="assets/imgs/common/footer/f_logo.svg" alt="OMG김치">
+        </h2>
+        <ul class="footer-menu">
+          <li><a href="" class="txt-nxt">개인정보처리방침</a></li><!-- fw700 -->
+          <li><a href="" class="txt-nxt">홈페이지 이용약관</a></li>
+          <li><a href="" class="txt-nxt">윤리경영</a></li>
+          <li><a href="" class="txt-nxt">공지사항</a></li>
+          <li><a href="" class="txt-nxt">모바일</a></li>
+          <li><a href="">사이트맵</a></li>
+        </ul>
+        <p class="btns">
+          <a href=""><span>회사소개</span></a>
+          <a href=""><span>채용안내</span></a>
+          <a href="" target="_blank"><span>신규입점</span></a>
+        </p>
+        <div class="text-box">
+          <div class="footer-text">
+            <p><span class="txt-nxt">대표이사 : 박찬민</span><span>주소 : 서울특별시 종로구 사직로 161</span></p>
+            <p><span class="txt-nxt">사업자등록번호 : 123-4567-890</span><span>통신판매업신고번호 : 제2019-서울종로-01234호</span><a
+                href="">사업자정보확인</a></p>
+
+            <p class="copy">copyright &copy; GYEONGBOKGUNG all rights reserved.</p>
+          </div>
+          <div class="tel-request">
+            <p class="home-number">홈페이지 관련 문의
+              <em class="">(02) 3700-3900</em>
+            </p>
+            <p class="site-number">상담시간 : 월~금 10:00~16:00(토/일, 공휴일 휴무, 점심시간 12:00~13:30)</p>
+            <p class="key-number">대표번호
+              <em class="roboto">3700-3900</em>
+              &nbsp;&nbsp;/&nbsp;&nbsp;딜리버리 주문번호<em class="roboto">02-734-7720</em></p>
+          </div>
+        </div>
+        <ul class="sns-menu">
+          <li>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/fbk.svg" alt="OMG김치 페이스북 바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/twt.svg" alt="OMG김치 트윗터 바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/utb.svg" alt="OMG김치 유투브 바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/pin.svg" alt="OMG김치 핀터레스트 바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/inst.svg" alt="OMG김치 인스타그램 바로가기">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="assets/imgs/common/footer/sns/in.svg" alt="OMG김치 링크드인 바로가기">
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+    </footer>
+  </div>
+</body>
+
+</html>

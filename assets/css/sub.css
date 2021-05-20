@@ -1,3 +1,16 @@
 @charset "utf-8";
 
 /* h2 img */
+.page-title { background: url(../imgs/brand/mock-up-100.jpg) no-repeat 100% / cover; } 
+
+/* section_wrap */
+#section_wrap .inner section{margin-top: 400px;}
+#section_wrap .inner section+section{margin: 85px 0;}
+#section_wrap .inner #cont1{background: #fff;text-align: center;}
+#section_wrap .inner #cont1 h3{font-size: 135px; color: #f02900;}
+#section_wrap .inner #cont1 div{font-weight: 600;font-size: 30px; padding: 45px 0 200px; color: #6b6b6b;}
+#section_wrap .inner #cont1 p{font-size: 22px; }
+
+#section_wrap .inner #cont2{height: 635px;background: #0c10e22d;}
+#section_wrap .inner #cont3{height: 635px;background: #0c10e22d;}
+#section_wrap .inner #cont4{height: 635px;background: #0c10e22d; margin: 15px 0 288px;}

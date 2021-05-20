@@ -2,11 +2,9 @@
 /* header */
 #header-wrap { height: 116px; } 
 
-#lang button div { display: block; width: 46px; height: 55px; background: url(../imgs/sub_common/lang.svg)no-repeat 100% / contain; } 
+#lang button{ display: block; width: 46px; height: 55px; background: url(../imgs/sub_common/lang.svg) no-repeat 0 / contain; position: relative; left: 180px; padding-bottom: 5px;} 
 
-#lang button { position: relative; left: 180px; } 
-
-#lang ul { display: block; position: absolute; right: -6px; z-index: 100; padding: 7px 0; border: 1px solid #ccc; background: #fff; text-align: center; font-size: 12px; } 
+#lang ul { position: absolute; right: -6px; z-index: 100; padding: 7px 0; border: 1px solid #ccc; background: #fff; text-align: center; font-size: 12px; } 
 
 #lang ul li { width: 28px; height: 17px; padding: 2px 14px; line-height: 1.4; } 
 
@@ -22,14 +20,14 @@
 
 #util a:first-child { position: relative; } 
 
-#util a span { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #ef2900; font-size: 11px; display: inline-block; text-align: center; line-height: 20px; color: #fff; font-family: Tmon; right: 10px; top: 3px; } 
+#util a span { position: absolute; width: 18px; height: 18px; border-radius: 50%; background: #f02900; font-size: 11px; display: inline-block; text-align: center; line-height: 20px; color: #fff; font-family: Tmon; right: 10px; top: 3px; } 
 
 /* dbody */
-.section_wrap { padding-top: 116px; height: 3000px; background: #ef28001f; } 
+#dbody {padding-top: 116px;} 
 
 .nav-list { display: none; } 
 
-.page-title { width: 100%; height: 600px; font-size: 50px; text-align: center; background: url(../imgs/brand/mock-up-100.jpg)no-repeat 100% / cover; font-family: Tmon; } 
+.page-title { width: 100%; height: 600px; font-size: 50px; text-align: center; font-family: Tmon; } 
 
 .page-title span { position: relative; line-height: 580px; color: #fff; top: -10px; } 
 
@@ -43,7 +41,7 @@
 
 .location-data .btn-home { position: relative; display: block; width: 60px; height: 50px; border-left: 1px solid #dedede; border-right: 1px solid #dedede; float: left; } 
 
-.location-data .btn-home::after { content: ''; position: absolute; left: 0; right: 0; margin: 17px auto; display: block; height: 15px; width: 20px; background: #000; background: url(../imgs/sub_common/sub_nav_home.svg)no-repeat}
+.location-data .btn-home::after { content: ''; position: absolute; left: 0; right: 0; margin: 17px auto; display: block; height: 15px; width: 20px; background: #000; background: url(../imgs/sub_common/sub_nav_home.svg) no-repeat}
 
 .location-data .depth-menu .depth-cell { width: 245px; border-right: 1px solid #dedede; float: left; } 
 
@@ -54,6 +52,6 @@
 .location-data .location { position: absolute; top: 0; right: 0; overflow: hidden; color: #bab5af; } 
 .location>li { position: relative; line-height: 50px; float: left; } 
 
-.location>li+li { padding-left: 25px;; } 
+.location>li+li { padding-left: 25px; } 
 .location>li+li::after { position: absolute; content: ''; display: block; width: 6px; height: 12px; top: calc(50% - 4px); left: 10px; background: url(../imgs/sub_common/sub_nav_road.svg) 6px 12px / cover}
 
